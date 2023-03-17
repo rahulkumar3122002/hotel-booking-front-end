@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { toast } from "react-toastify";
@@ -191,7 +191,4 @@ const Login = () => {
   );
 };
 
-const context = createContext();
-
 export default Login;
-export { context };
