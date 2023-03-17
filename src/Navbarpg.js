@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 
 import { Context } from "./Context";
 
-function Navbarpg() {
+export default function Navbarpg() {
   const [state, setState] = React.useState({
     left: false,
   });
@@ -328,5 +328,3 @@ function Navbarpg() {
     </div>
   );
 }
-
-export default Navbarpg;
