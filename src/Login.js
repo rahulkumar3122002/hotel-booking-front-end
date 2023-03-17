@@ -191,7 +191,4 @@ const Login = () => {
   );
 };
 
-const context = createContext();
-
 export default Login;
-export { context };
