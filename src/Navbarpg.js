@@ -7,6 +7,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
@@ -20,11 +21,13 @@ import ListRoundedIcon from "@mui/icons-material/ListRounded";
 
 import CreditScoreIcon from "@mui/icons-material/CreditScore";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Context } from "./Context";
 
 function Navbarpg() {
+  const navigate = useNavigate();
+
   const [state, setState] = React.useState({
     left: false,
   });
@@ -40,9 +43,25 @@ function Navbarpg() {
     setState({ ...state, [anchor]: open });
   };
 
+  const { setBool } = Context();
+  const { setBool2 } = Context();
+  const { setBool4 } = Context();
   const { bool2 } = Context();
   // const { bool3 } = Context();
   // const { bool4 } = Context();
+
+  const SignOut_user = () => {
+    const val = ["authorization", "role", "login status"];
+
+    val.map((item) => localStorage.removeItem(item));
+
+    if (!localStorage.getItem("autorization", "role", "login status")) {
+      setBool(false);
+      setBool2(false);
+      setBool4(false);
+      navigate("/login");
+    }
+  };
 
   const list = (anchor) => (
     <Box
@@ -54,6 +73,16 @@ function Navbarpg() {
       <div style={{ backgroundColor: "rgb(162, 179, 139)", height: "100vh" }}>
         {bool2 === true ? (
           <List>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <LogoutIcon />
+                </ListItemIcon>
+                <ListItemText primary={" Logout "} onClick={SignOut_user} />
+                {/* <Link style={{ textDecoration: "none", color: "black" }} to="/"> */}
+                {/* </Link> */}
+              </ListItemButton>
+            </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
