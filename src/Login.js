@@ -83,20 +83,15 @@ const Login = () => {
       <Helmet>
         <style>{"body { background-color:rgb(162, 179, 139) ; }"}</style>
       </Helmet>
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          height: "100vh",
-        }}
-      >
+      <div>
         <Form
           style={{
+            width: "30%",
+            top: "50%",
+            left: "50%",
+            position: "absolute",
+            transform: "translate(-50%,-50%)",
             boxShadow: "5px 5px 10px black ",
-            width: "40%",
             padding: "10px",
             color: "black",
             backgroundColor: "rgb(215, 233, 185)",
