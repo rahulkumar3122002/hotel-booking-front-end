@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { Context } from "./Context";
@@ -129,6 +129,7 @@ const Login = () => {
           <Form.Group className="mb-3" controlId="formHorizontalPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
+              name="password"
               type="password"
               placeholder="Password"
               style={{
