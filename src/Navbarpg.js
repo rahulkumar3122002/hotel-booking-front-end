@@ -79,8 +79,6 @@ function Navbarpg() {
                   <LogoutIcon />
                 </ListItemIcon>
                 <ListItemText primary={" Logout "} onClick={SignOut_user} />
-                {/* <Link style={{ textDecoration: "none", color: "black" }} to="/"> */}
-                {/* </Link> */}
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -253,6 +251,14 @@ function Navbarpg() {
           </List>
         ) : (
           <List>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <LogoutIcon />
+                </ListItemIcon>
+                <ListItemText primary={" Logout "} onClick={SignOut_user} />
+              </ListItemButton>
+            </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
