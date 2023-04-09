@@ -38,7 +38,6 @@ const Router = () => {
             <Route path="/deluxeroom" element={<Deluxeroom />} />
             <Route path="/deluxeroomdata" element={<Deluxeroomdata />} />
             <Route path="/deluxeroompaydata" element={<Deluxeroompaydata />} />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
           </Routes>
         </BrowserRouter>
       ) : (
@@ -46,6 +45,7 @@ const Router = () => {
           <Routes>
             <Route path="/registration" element={<Registration />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </BrowserRouter>
