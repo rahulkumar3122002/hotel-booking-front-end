@@ -16,6 +16,8 @@ import { Helmet } from "react-helmet";
 
 import data_bg_img from "./image/data_bg_img.jpg";
 
+import Deleteimg from "./image/delete.jpg";
+
 const Deluxeroompaydata = () => {
   const [roomalldata, setRoomAllData] = useState([]);
   const [defaultvalue, setDefaultValue] = useState("");
@@ -177,32 +179,56 @@ const Deluxeroompaydata = () => {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
-          <Modal.Title>final delete this data</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-1" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                defaultValue={defaultvalue.email}
-                disabled
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button
-            variant="primary"
-            onClick={(_id) => delete_deluxe_room_user_data(defaultvalue._id)}
-          >
-            Delete
-          </Button>
-        </Modal.Footer>
+        <div style={{ backgroundColor: "rgb(162, 179, 139)" }}>
+          <Modal.Header closeButton>
+            <Modal.Title>Confirm delete this data</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form
+              style={{
+                boxShadow: "5px 5px 10px black ",
+                backgroundColor: "rgb(215, 233, 185)",
+                padding: "10px",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src={Deleteimg}
+                  alt="wrong"
+                  style={{
+                    height: "80px",
+                  }}
+                />
+              </div>
+              <hr></hr>
+              <Form.Group className="mb-1" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  defaultValue={defaultvalue.email}
+                  disabled
+                />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button
+              variant="primary"
+              onClick={(_id) => delete_deluxe_room_user_data(defaultvalue._id)}
+            >
+              Delete
+            </Button>
+          </Modal.Footer>
+        </div>
       </Modal>
     </div>
   );
