@@ -74,149 +74,183 @@ function Navbarpg() {
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <HomeRoundedIcon />
+                  <HomeRoundedIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link style={{ textDecoration: "none", color: "black" }} to="/">
-                  <ListItemText primary={" Home "} />
+                  <ListItemText primary={" Home "} style={{ color: "black" }} />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <NightShelterSharpIcon />
+                  <NightShelterSharpIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/firstroom"
                 >
-                  <ListItemText primary={" 5star Room "} />
+                  <ListItemText
+                    primary={" 5star Room "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <NightShelterSharpIcon />
+                  <NightShelterSharpIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/secondroom"
                 >
-                  <ListItemText primary={" 7star Room "} />
+                  <ListItemText
+                    primary={" 7star Room "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <NightShelterSharpIcon />
+                  <NightShelterSharpIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/deluxeroom"
                 >
-                  <ListItemText primary={" Deluxe Room "} />
+                  <ListItemText
+                    primary={" Deluxe Room "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <DatasetIcon />
+                  <DatasetIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/userdata"
                 >
-                  <ListItemText primary={" User Data "} />
+                  <ListItemText
+                    primary={" User Data "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <DatasetIcon />
+                  <DatasetIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/firstroomdata"
                 >
-                  <ListItemText primary={" 5star Room Data "} />
+                  <ListItemText
+                    primary={" 5star Room Data "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <DatasetIcon />
+                  <DatasetIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/secondroomdata"
                 >
-                  <ListItemText primary={" 7star Room Data "} />
+                  <ListItemText
+                    primary={" 7star Room Data "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <DatasetIcon />
+                  <DatasetIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/deluxeroomdata"
                 >
-                  <ListItemText primary={" Deluxe Room Data "} />
+                  <ListItemText
+                    primary={" Deluxe Room Data "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <CreditScoreIcon />
+                  <CreditScoreIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/firstroompaydata"
                 >
-                  <ListItemText primary={"5star Room Pay Data "} />
+                  <ListItemText
+                    primary={"5star Room Pay Data "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <CreditScoreIcon />
+                  <CreditScoreIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/secondroompaydata"
                 >
-                  <ListItemText primary={" 7star Room Pay Data "} />
+                  <ListItemText
+                    primary={" 7star Room Pay Data "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <CreditScoreIcon />
+                  <CreditScoreIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/deluxeroompaydata"
                 >
-                  <ListItemText primary={" Deluxe Room Pay Data "} />
+                  <ListItemText
+                    primary={" Deluxe Room Pay Data "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <LogoutIcon />
+                  <LogoutIcon style={{ color: "black" }} />
                 </ListItemIcon>
-                <ListItemText primary={" Logout "} onClick={SignOut_user} />
+                <ListItemText
+                  primary={" Logout "}
+                  style={{ color: "black" }}
+                  onClick={SignOut_user}
+                />
               </ListItemButton>
             </ListItem>
           </List>
@@ -225,58 +259,71 @@ function Navbarpg() {
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <HomeRoundedIcon />
+                  <HomeRoundedIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link style={{ textDecoration: "none", color: "black" }} to="/">
-                  <ListItemText primary={" Home "} />
+                  <ListItemText primary={" Home "} style={{ color: "black" }} />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <NightShelterSharpIcon />
+                  <NightShelterSharpIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/firstroom"
                 >
-                  <ListItemText primary={" 5star Room "} />
+                  <ListItemText
+                    primary={" 5star Room "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <NightShelterSharpIcon />
+                  <NightShelterSharpIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/secondroom"
                 >
-                  <ListItemText primary={" 7star Room "} />
+                  <ListItemText
+                    primary={" 7star Room "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <NightShelterSharpIcon />
+                  <NightShelterSharpIcon style={{ color: "black" }} />
                 </ListItemIcon>
                 <Link
                   style={{ textDecoration: "none", color: "black" }}
                   to="/deluxeroom"
                 >
-                  <ListItemText primary={" Deluxe Room "} />
+                  <ListItemText
+                    primary={" Deluxe Room "}
+                    style={{ color: "black" }}
+                  />
                 </Link>
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <LogoutIcon />
+                  <LogoutIcon style={{ color: "black" }} />
                 </ListItemIcon>
-                <ListItemText primary={" Logout "} onClick={SignOut_user} />
+                <ListItemText
+                  primary={" Logout "}
+                  style={{ color: "black" }}
+                  onClick={SignOut_user}
+                />
               </ListItemButton>
             </ListItem>
           </List>
