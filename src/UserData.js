@@ -17,6 +17,9 @@ import Logo from "./Logo";
 
 import { Helmet } from "react-helmet";
 
+import Deleteimg from "./image/delete.jpg";
+import Updateimg from "./image/update.jpg";
+
 const UserData = () => {
   const [Getdata, setGetdata] = useState([]);
 
@@ -221,84 +224,132 @@ const UserData = () => {
         </Table>
       </div>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Data Update Form</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={defaultdata.name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                defaultValue={defaultdata.email}
-                disabled
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicAddress">
-              <Form.Label>Address</Form.Label>
-              <Form.Control
-                type="text"
-                defaultValue={defaultdata.address}
-                onChange={(e) => setAddress(e.target.value)}
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button
-            variant="primary"
-            onClick={(_id) => updatedata(defaultdata._id)}
-          >
-            Save Changes
-          </Button>
-        </Modal.Footer>
+        <div style={{ backgroundColor: "rgb(162, 179, 139)" }}>
+          <Modal.Header closeButton>
+            <Modal.Title>Data Update Form</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form
+              style={{
+                boxShadow: "5px 5px 10px black ",
+                backgroundColor: "rgb(215, 233, 185)",
+                padding: "10px",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src={Updateimg}
+                  alt="wrong"
+                  style={{
+                    height: "80px",
+                  }}
+                />
+              </div>
+              <hr></hr>
+              <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  defaultValue={defaultdata.name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  defaultValue={defaultdata.email}
+                  disabled
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicAddress">
+                <Form.Label>Address</Form.Label>
+                <Form.Control
+                  type="text"
+                  defaultValue={defaultdata.address}
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button
+              variant="primary"
+              onClick={(_id) => updatedata(defaultdata._id)}
+            >
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </div>
       </Modal>
 
       <Modal show={show2} onHide={handleClose2}>
-        <Modal.Header closeButton>
-          <Modal.Title>Confirm Delete Data</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-1" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                defaultValue={defaultdata.email}
-                disabled
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose2}>
-            Close
-          </Button>
-          <Button
-            variant="primary"
-            onClick={(_id) => delete_user_data(defaultdata._id)}
-          >
-            Delete
-          </Button>
-        </Modal.Footer>
+        <div style={{ backgroundColor: "rgb(162, 179, 139)" }}>
+          <Modal.Header closeButton>
+            <Modal.Title>Confirm Delete Data</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form
+              style={{
+                boxShadow: "5px 5px 10px black ",
+                backgroundColor: "rgb(215, 233, 185)",
+                padding: "10px",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src={Deleteimg}
+                  alt="wrong"
+                  style={{
+                    height: "80px",
+                  }}
+                />
+              </div>
+              <hr></hr>
+              <Form.Group className="mb-1" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  defaultValue={defaultdata.email}
+                  disabled
+                />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose2}>
+              Close
+            </Button>
+            <Button
+              variant="primary"
+              onClick={(_id) => delete_user_data(defaultdata._id)}
+            >
+              Delete
+            </Button>
+          </Modal.Footer>
+        </div>
       </Modal>
     </div>
   );
