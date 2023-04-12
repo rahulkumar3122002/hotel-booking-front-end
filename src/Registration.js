@@ -104,7 +104,7 @@ const Home = () => {
               src={register}
               alt="wrong"
               style={{
-                height: "60px",
+                height: "75px",
                 width: "100px",
               }}
             />
