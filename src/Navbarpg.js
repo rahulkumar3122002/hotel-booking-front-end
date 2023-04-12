@@ -10,10 +10,8 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
-import HowToRegIcon from "@mui/icons-material/HowToReg";
 
 import NightShelterSharpIcon from "@mui/icons-material/NightShelterSharp";
-import ExitToAppTwoToneIcon from "@mui/icons-material/ExitToAppTwoTone";
 
 import DatasetIcon from "@mui/icons-material/Dataset";
 
@@ -76,45 +74,10 @@ function Navbarpg() {
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
-                  <LogoutIcon />
-                </ListItemIcon>
-                <ListItemText primary={" Logout "} onClick={SignOut_user} />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
                   <HomeRoundedIcon />
                 </ListItemIcon>
                 <Link style={{ textDecoration: "none", color: "black" }} to="/">
                   <ListItemText primary={" Home "} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HowToRegIcon />
-                </ListItemIcon>
-                <Link
-                  style={{ textDecoration: "none", color: "black" }}
-                  to="/registration"
-                >
-                  <ListItemText primary={" Registration "} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ExitToAppTwoToneIcon />
-                </ListItemIcon>
-                <Link
-                  style={{ textDecoration: "none", color: "black" }}
-                  to="/login"
-                >
-                  <ListItemText primary={" Login "} />
                 </Link>
               </ListItemButton>
             </ListItem>
@@ -248,9 +211,6 @@ function Navbarpg() {
                 </Link>
               </ListItemButton>
             </ListItem>
-          </List>
-        ) : (
-          <List>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -259,6 +219,9 @@ function Navbarpg() {
                 <ListItemText primary={" Logout "} onClick={SignOut_user} />
               </ListItemButton>
             </ListItem>
+          </List>
+        ) : (
+          <List>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -266,33 +229,6 @@ function Navbarpg() {
                 </ListItemIcon>
                 <Link style={{ textDecoration: "none", color: "black" }} to="/">
                   <ListItemText primary={" Home "} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HowToRegIcon />
-                </ListItemIcon>
-                <Link
-                  style={{ textDecoration: "none", color: "black" }}
-                  to="/registration"
-                >
-                  <ListItemText primary={" Registration "} />
-                </Link>
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <ExitToAppTwoToneIcon />
-                </ListItemIcon>
-                <Link
-                  style={{ textDecoration: "none", color: "black" }}
-                  to="/login"
-                >
-                  <ListItemText primary={" Login "} />
                 </Link>
               </ListItemButton>
             </ListItem>
@@ -333,6 +269,14 @@ function Navbarpg() {
                 >
                   <ListItemText primary={" Deluxe Room "} />
                 </Link>
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <LogoutIcon />
+                </ListItemIcon>
+                <ListItemText primary={" Logout "} onClick={SignOut_user} />
               </ListItemButton>
             </ListItem>
           </List>
