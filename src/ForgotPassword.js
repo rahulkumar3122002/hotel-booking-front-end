@@ -77,7 +77,7 @@ const ForgotPassword = () => {
   const setpassword = () => {
     axios
       .post(`http://localhost:1001/router/setpassword`, {
-        email: email,
+        email: email || sendemailotp,
         password: stpass,
       })
       .then((result) => {
@@ -224,7 +224,6 @@ const ForgotPassword = () => {
                   onChange={(e) => setOtp(e.target.value)}
                 />
               </Form.Group>
-              <p style={{ color: "red" }}>Enter Otp From Email.</p>
               <hr></hr>
 
               <Form.Group
