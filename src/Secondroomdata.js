@@ -33,6 +33,7 @@ const AmountData = () => {
 
   const [updateperson, setUpdatePerson] = useState("");
   const [updateroomNo, setUpdateroomNo] = useState("");
+  const [updateroomType, setUpdateroomType] = useState("");
   const [updatecheckInDate, setUpdatecheckInDate] = useState("");
   const [updatecheckOutDate, setUpdatecheckOutDate] = useState("");
 
@@ -79,6 +80,7 @@ const AmountData = () => {
         {
           person: updateperson || defaultvalue.person,
           roomNo: updateroomNo || defaultvalue.roomNo,
+          roomType: updateroomType || defaultvalue.roomType,
           checkInDate: updatecheckInDate || defaultvalue.checkInDate,
           checkOutDate: updatecheckOutDate || defaultvalue.checkOutDate,
         }
@@ -271,6 +273,7 @@ const AmountData = () => {
                   type="email"
                   placeholder="Enter email"
                   defaultValue={defaultvalue.email}
+                  disabled
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPerson">
@@ -280,6 +283,16 @@ const AmountData = () => {
                   placeholder="Person"
                   defaultValue={defaultvalue.person}
                   onChange={(e) => setUpdatePerson(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicroomType">
+                <Form.Label>roomType</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="roomType"
+                  defaultValue={defaultvalue.roomType}
+                  onChange={(e) => setUpdateroomType(e.target.value)}
+                  disabled
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicroomNo">
