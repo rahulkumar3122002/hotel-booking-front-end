@@ -332,7 +332,7 @@ const Deluxeroomdata = () => {
                   type="number"
                   min={1}
                   max={6}
-                  placeholder="Person"
+                  placeholder="roomNo"
                   defaultValue={updtvalue.roomNo}
                   onChange={(e) => setUpdateroomNo(e.target.value)}
                 />
