@@ -16,6 +16,9 @@ import Logo from "./Logo";
 
 import { Helmet } from "react-helmet";
 
+import Deleteimg from "./image/delete.jpg";
+import Updateimg from "./image/update.jpg";
+
 const Deluxeroomdata = () => {
   const [alldata, setAlldata] = useState([]);
 
@@ -231,103 +234,151 @@ const Deluxeroomdata = () => {
       </div>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Confirm Delete Data</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-1" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" value={value.email} disabled />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={(_id) => deletedata(value._id)}>
-            Delete
-          </Button>
-        </Modal.Footer>
+        <div style={{ backgroundColor: "rgb(162, 179, 139)" }}>
+          <Modal.Header closeButton>
+            <Modal.Title>Confirm Delete Data</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form
+              style={{
+                boxShadow: "5px 5px 10px black ",
+                backgroundColor: "rgb(215, 233, 185)",
+                padding: "10px",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src={Deleteimg}
+                  alt="wrong"
+                  style={{
+                    height: "80px",
+                  }}
+                />
+              </div>
+              <hr></hr>
+              <Form.Group className="mb-1" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" value={value.email} disabled />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={(_id) => deletedata(value._id)}>
+              Delete
+            </Button>
+          </Modal.Footer>
+        </div>
       </Modal>
 
       <Modal show={show2} onHide={handleClose2}>
-        <Modal.Header closeButton>
-          <Modal.Title> Data Update Form</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                defaultValue={updtvalue.email}
-                disabled
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPerson">
-              <Form.Label>Person</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Person"
-                defaultValue={updtvalue.person}
-                onChange={(e) => setUpdatePerson(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicroomNo">
-              <Form.Label>roomNo</Form.Label>
-              <Form.Control
-                type="number"
-                min={1}
-                max={6}
-                placeholder="Person"
-                defaultValue={updtvalue.roomNo}
-                onChange={(e) => setUpdateroomNo(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicroomType">
-              <Form.Label>roomType</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="roomType"
-                defaultValue={updtvalue.roomType}
-                onChange={(e) => setUpdateroomType(e.target.value)}
-                disabled
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasiccheckInDate">
-              <Form.Label>checkInDate</Form.Label>
-              <Form.Control
-                type="date"
-                placeholder="checkInDate"
-                defaultValue={updtvalue.checkInDate}
-                onChange={(e) => setUpdatecheckInDate(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasiccheckOutDate">
-              <Form.Label>checkOutDate</Form.Label>
-              <Form.Control
-                type="date"
-                placeholder="checkOutDate"
-                defaultValue={updtvalue.checkOutDate}
-                onChange={(e) => setUpdatecheckOutDate(e.target.value)}
-              />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose2}>
-            Close
-          </Button>
-          <Button
-            variant="primary"
-            onClick={(_id) => updateamountdata(updtvalue._id)}
-          >
-            Save Changes
-          </Button>
-        </Modal.Footer>
+        <div style={{ backgroundColor: "rgb(162, 179, 139)" }}>
+          <Modal.Header closeButton>
+            <Modal.Title>Data Update Form</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form
+              style={{
+                boxShadow: "5px 5px 10px black ",
+                backgroundColor: "rgb(215, 233, 185)",
+                padding: "10px",
+              }}
+            >
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  src={Updateimg}
+                  alt="wrong"
+                  style={{
+                    height: "80px",
+                  }}
+                />
+              </div>
+              <hr></hr>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  defaultValue={updtvalue.email}
+                  disabled
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicPerson">
+                <Form.Label>Person</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Person"
+                  defaultValue={updtvalue.person}
+                  onChange={(e) => setUpdatePerson(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicroomNo">
+                <Form.Label>roomNo</Form.Label>
+                <Form.Control
+                  type="number"
+                  min={1}
+                  max={6}
+                  placeholder="Person"
+                  defaultValue={updtvalue.roomNo}
+                  onChange={(e) => setUpdateroomNo(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicroomType">
+                <Form.Label>roomType</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="roomType"
+                  defaultValue={updtvalue.roomType}
+                  onChange={(e) => setUpdateroomType(e.target.value)}
+                  disabled
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasiccheckInDate">
+                <Form.Label>checkInDate</Form.Label>
+                <Form.Control
+                  type="date"
+                  placeholder="checkInDate"
+                  defaultValue={updtvalue.checkInDate}
+                  onChange={(e) => setUpdatecheckInDate(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasiccheckOutDate">
+                <Form.Label>checkOutDate</Form.Label>
+                <Form.Control
+                  type="date"
+                  placeholder="checkOutDate"
+                  defaultValue={updtvalue.checkOutDate}
+                  onChange={(e) => setUpdatecheckOutDate(e.target.value)}
+                />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose2}>
+              Close
+            </Button>
+            <Button
+              variant="primary"
+              onClick={(_id) => updateamountdata(updtvalue._id)}
+            >
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </div>
       </Modal>
     </div>
   );
