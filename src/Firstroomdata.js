@@ -33,8 +33,8 @@ const AmountData = () => {
   const [defaultvalue, setDefaultValue] = useState("");
 
   const [updateperson, setUpdatePerson] = useState("");
-  const [updateroomType, setUpdateroomType] = useState("");
   const [updateroomNo, setUpdateroomNo] = useState("");
+  const [updateroomType, setUpdateroomType] = useState("");
   const [updatecheckInDate, setUpdatecheckInDate] = useState("");
   const [updatecheckOutDate, setUpdatecheckOutDate] = useState("");
 
@@ -76,8 +76,8 @@ const AmountData = () => {
     axios
       .post(`http://localhost:1001/router/first_room_updateamountdata/${_id}`, {
         person: updateperson || defaultvalue.person,
-        roomType: updateroomType || defaultvalue.roomType,
         roomNo: updateroomNo || defaultvalue.roomNo,
+        roomType: updateroomType || defaultvalue.roomType,
         checkInDate: updatecheckInDate || defaultvalue.checkInDate,
         checkOutDate: updatecheckOutDate || defaultvalue.checkOutDate,
       })
@@ -282,16 +282,6 @@ const AmountData = () => {
                   onChange={(e) => setUpdatePerson(e.target.value)}
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicroomType">
-                <Form.Label>roomType</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="roomType"
-                  defaultValue={defaultvalue.roomType}
-                  onChange={(e) => setUpdateroomType(e.target.value)}
-                  disabled
-                />
-              </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicroomNo">
                 <Form.Label>roomNo</Form.Label>
                 <Form.Control
@@ -301,6 +291,16 @@ const AmountData = () => {
                   placeholder="Person"
                   defaultValue={defaultvalue.roomNo}
                   onChange={(e) => setUpdateroomNo(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicroomType">
+                <Form.Label>roomType</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="roomType"
+                  defaultValue={defaultvalue.roomType}
+                  onChange={(e) => setUpdateroomType(e.target.value)}
+                  disabled
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasiccheckInDate">
