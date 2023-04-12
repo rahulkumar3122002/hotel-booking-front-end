@@ -46,8 +46,8 @@ const ForgotPassword = () => {
       })
       .then((result) => {
         if (result.data.isValid === true) {
+          toast.success("check your Gmail.....");
           handleShow();
-          toast.success("open Gmail.....");
         } else {
           toast.error("please try again.....");
         }
